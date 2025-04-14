@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 110px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+    /* background-color: #503e3e; */
+
+}
+
+.logo p {
+    font-size: 45px;
+    font-weight: Bold;
+    color: #9999ff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+.logo p:hover {
+    color: #6868f7;
+}
+
+.logo p i {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    /* text-decoration: none; */
+    justify-content: center;
+    list-style: none;
+    /* padding: 10px; */
+}
+
+.links a {
+    padding: 20px;
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #9999ff;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+    color: #6868f7;
+    /* text-transform: uppercase; */
+}
+
+.search {
+    width: 800px;
+    height: 55px;
+    background: #e4e4e4;
+    border-radius: 60px;
+    padding: 16px 18px;
+}
+
+.search i {
+    color: #747272;
+    font-size: 16px;
+    font-weight: bold;
+    /* margin-top: 1.5px; */
+    color: #9999ff;
+}
+
+.search i:hover {
+    color: #6868f7;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 80%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    margin: 0 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #9999ff;
+
+}
+
+.icon {
+    display: inline-block;
+    font-size: 26px;
+    color: #000;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #9999ff;
+}
+
+.icon i {
+    padding: 20px;
+    justify-content: right;
+}
+
+.icon i:hover {
+    color: #6868f7;
+    font-size: bold;
+}
+
+.drop1 {
+    display: none;
+    position: absolute;
+    background-color: #9999ff;
+    /* margin-right: 5600px; */
+}
+
+.drop:hover .drop1 {
+    display: block;
+    z-index: 10;
+}
+
+.drop1 li {
+    color: white;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.drop1 li:hover {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+    /* padding-right: 100px; */
+}
+
+.drop a {
+    /* text-decoration: none; */
+    /* color: #9999ff; */
+    padding: 10px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+.container img {
+    width: 100%;
+    height: 80vh;
+    background-image: url(images/Train\ Crossing.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(3px);
+    position: relative;
+}
+
+.row {
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    /* display: flex; */
+    /* height: 88%; */
+    /* align-items: center; */
+}
+
+/* .col{
+    margin-top: 150px;
+    flex-basis: 50%;
+} */
+.col h1 {
+    color: #fff;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 60px;
+    text-shadow: 10px 10px 0px 0 rgba(0, 0 0, .2);
+
+}
+
+.col p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.col p span {
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.col p span:hover {
+    text-decoration: underline;
+    /* text-transform: uppercase; */
+    color: #ffff99;
+}
+
+button {
+    width: 180px;
+    color: #9999ff;
+    font-size: 15px;
+    padding: 12px 0;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    font-size: 15px;
+    background-color: #9999ff;
+    color: white;
+    text-transform: uppercase;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+.card {
+    display: inline-block;
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    padding: 150px 55px;
+    box-sizing: border-box;
+    margin: 20px 15px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.card h5 {
+    color: #fff;
+    /* background-color: #000; */
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* transition: opacity 0.3s, transform 0.3s; */
+}
+
+.card:hover h5 {
+    opacity: 1;
+}
+
+.card1 {
+    background-image: url(images/jungle.jpg);
+}
+
+.card2 {
+    background-image: url(images/sea.jpg);
+}
+
+.card3 {
+    background-image: url(images/mountain.jpg);
+}
+
+.card4 {
+    background-image: url(images/building.jpg);
+}
+
+.card5 {
+    background-image: url(images/cars.jpg);
+}
+
+.card:hover {
+    transform: translateY(10px);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+    /* background-image: url(images/Download\ Africa\ Desert\ Landscape\ Vector\ for\ free.jpg); */
+    /* position: relative; */
+}
+
+.gallery .heading h3 {
+    font-size: 50px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #222;
+    font-family: 'Lilita One', sans-serif;
+}
+
+.gallery .heading {
+    width: 60%;
+    padding-bottom: 50px;
+}
+
+.gallery .box {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: row;
+}
+
+.gallery .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    position: relative;
+}
+
+.gallery .box .dream img {
+    width: 100%;
+    /* height: 600px; */
+    padding-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.gallery .box .dream img:hover {
+    transform: translateY(-12px);
+    transform: scale(1.02);
+}
+
+.six {
+    height: 612px;
+
+}
+
+.sev {
+    height: 544px;
+
+}
+
+.more {
+    background-color: #222;
+    margin: 40px 0px 70px 803px;
+    padding: 15px 40px;
+    border-radius: 30px;
+    justify-content: center;
+    /* align-items: center; */
+    display: flex;
+    width: 10%;
+}
+
+.more a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.more:hover {
+    background-color: #9999ff;
+    text-transform: uppercase;
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: #000;
+}
+
+.social-items {
+    text-align: center;
+}
+
+.social-items a {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    opacity: 0.8;
+    line-height: 38px;
+    font-size: 25px;
+}
+
+.social-items a:hover {
+    opacity: 1;
+    color: #9999ff;
+}
+
+.list {
+    padding: 0;
+    /* margin-top: 0; */
+    font-size: 18px;
+    line-height: 1.6;
+    list-style: none;
+    /* margin-bottom: 0; */
+    text-align: center;
+}
+
+.list a {
+    opacity: 0.8;
+    color: #fff;
+    text-decoration: none;
+}
+
+.list li {
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.list a:hover {
+    opacity: 1;
+    color: #9999ff;
+}
+
+.copyright {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(181, 175, 175);
+}

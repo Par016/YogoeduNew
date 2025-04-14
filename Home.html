@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js">
+
+
+    </script>
+<!-- <script>
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+    const auth = getAuth();
+    onAuthStateChanged(auth, user => {
+      if (!user) {
+        window.location.href = "LogIn.html";
+      }
+    });
+</script>
+<script type="module">
+    import { logIn } from './auth.js';
+  
+    document.getElementById('LoginButton').addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+  
+      logIn(email, password)
+        .then(() => {
+          alert("Login successful!");
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          alert("Login failed: " + error.message);
+        });
+    });
+  </script> -->
+  
+    <!-- Firebase SDKs -->
+   
+    
+
+</head>
+
+<body>
+    <section id="header">
+        <div class="container">
+            <img src="logo.png" alt="logo" class="logo">
+            <div class="header-text">
+                <h1>Empowering Minds, <br> Inspiring Futures</h1>
+                <span class="square"></span>
+                <p>"Empowering Minds, Igniting Curiosity: Unlocking Knowledge for a Brighter Tomorrow! Welcome to X yPo,
+                    where learning knows no bounds. Explore a world of endless possibilities, curated resources, and
+                    innovative tools designed to foster growth, inspire discovery, and elevate education. Join our
+                    vibrant community dedicated to nurturing intellects, fostering creativity, and shaping tomorrow's
+                    leaders. Step into a realm where learning becomes an adventure, and knowledge becomes empowerment."
+                </p>
+                <button class="common-btn">Read More</button>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span><br>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <nav class="" id="sideNav">
+        <ul>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#feature">FEATURES</a></li>
+            <li><a href="#courses">COURSES</a></li>
+            <li><a href="#offer">OFFERS</a></li>
+            <li><a href="#contact">SIGN UP</a></li>
+        </ul>
+    </nav>
+    <img src="menu.png" alt="menu" id="menuBtn">
+
+
+
+
+
+    <!-- ------About Us------ -->
+
+
+
+
+    <section id="about">
+        <div class="about-left">
+            <img src="about.png" alt="about">
+        </div>
+        <div class="about-right">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <span class="square"></span>
+                <p>Our educational platform is a vibrant hub designed to ignite curiosity and empower learners of all
+                    ages. With a commitment to accessible and engaging education, we offer a diverse range of courses,
+                    resources, and tools tailored to meet the needs of modern learners. Our team of passionate educators
+                    and experts curate content spanning various subjects, ensuring a dynamic learning experience that
+                    fosters growth, critical thinking, and lifelong learning. Join us on this enriching journey toward
+                    knowledge and skill acquisition.</p>
+                <span class="square-1"></span>
+                <h2>"Education is the passport to the future, for tomorrow belongs to those who prepare for it today."
+                </h2>
+                <h3>- Malcolm X</h3>
+                <div class="feature-btn">
+                    <button class="common-btn">Start Free Trial</button>
+                </div>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span><br>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- -------------------Features------------------- -->
+
+    <section id="feature">
+        <div class="feature-row">
+            <div class="feature-col">
+                <img src="pic-1.png" alt="">
+                <h4>Learn Anywhere</h4>
+                <p>Learn through your Tab,Pc,Laptop, or anything from your Home.</p>
+            </div><span class="square"></span>
+            <div class="feature-col">
+                <img src="pic-2.png" alt="">
+                <h4>Expert Teachers</h4>
+                <p>Our teachers are experts in their field and will guide you to learn effectively.</p>
+            </div>
+            <span class="square"></span>
+            <div class="feature-col">
+                <img src="pic-3.png">
+                <h4>Progress Tracking</h4>
+                <p>Keep track of your progress by viewing your dashboard regularly.</p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- --------------------Courses---------------->
+
+    <section id="courses">
+        <div class="container-1  courses-row">
+            <div class="courses-left">
+                <div class="courses-text">
+                    <h1>Browse our Top <br> Courses:</h1>
+                    <span class="square"></span>
+                    <p>Discover excellence with our top courses! Dive into a world of knowledge and expertise curated to
+                        empower your journey. Explore our carefully selected top courses designed to broaden your
+                        horizons, enhance your skills, and unleash your potential. From cutting-edge technology to
+                        timeless principles, browse through our array of top-tier courses and embark on a transformative
+                        learning experience</p>
+                    <button class="common-btn">View all courses</button>
+
+                </div>
+            </div>
+            <div class="courses-right">
+                <img src="course.png" alt="">
+            </div>
+
+    </section>
+
+    <!-- ------------------------Offer----------------------------->
+
+
+    <section id="offer">
+        <div class="offer-left">
+            <img src="offer.png" alt="about">
+        </div>
+        <div class="offer-right">
+            <div class="offer-text">
+                <h1>Limitless Offers, <br> Limitless Learning</h1>
+                <span class="square"></span>
+                <p>"Explore our top courses and seize incredible offers tailored just for you. Unleash your potential
+                    with:<br><br>
+
+                    <span>Discounted Rates:</span> Enjoy exclusive discounts on our flagship courses.<br>
+                    <span>Free Trial Access:</span> Dive into a free trial period for a taste of our premium
+                    content.<br>
+                    <span>Bundled Packages:</span> Access multiple courses at unmatched prices in bundled packages.<br>
+                    <span>Personalized Support:</span> Benefit from dedicated mentorship and guidance throughout your
+                    learning journey.<br>
+                    <span>Certification Bonuses:</span>Receive complimentary certifications upon course completion,
+                    boosting your credentials.<br><br>
+                </p>
+                <h2>~~Don't miss out on these amazing opportunities to elevate your skills and knowledge with our
+                    top-rated courses~~</h2>
+
+                <div class="feature-btn">
+                    <button class="common-btn">Explore more offers</button>
+                </div>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span><br>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- -------------------------contact-Form---------------------------->
+
+    <!-- <section>
+        <div class="conatiner-2 contact-row">
+            <div class="contact-left">
+                <h1>Sign up to join our <br>community</h1>
+            </div>
+            <div class="contact-right">
+                <img src="images/contact.png" alt="">
+            </div>
+        </div>
+    </section> -->
+
+
+    <section id="contact">
+        <div class="container-2  contact-row">
+            <div class="contact-left">
+                <div class="contact-text">
+                    <h1>Sign up to join our <br>community:</h1>
+                    <form action="">
+                        <input type="text" placeholder="username" required>
+                        <input type="email" placeholder="abc@xyz.com" required>
+                        <input type="password" placeholder="password" required>
+                        <div class="btn-box">
+                            <button class="common-btn">Log in</button>
+                            <button class="common-btn">Sign up</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="courses-right">
+                <img src="contact.png" alt="">
+            </div>
+
+    </section>
+
+    <!-- -----------------------footer--------------------------------->
+
+    <section id="footer">
+        <div class="container-2 fotter-row">
+            <hr>
+            <div class="footer-left">
+                <div class="footer-links">
+                    <div class="links-title">
+                        <h5>Product</h5>
+                        <small>Our Products</small><br>
+                        <small>Free Trail</small>
+                    </div>
+                    <div class="links-title">
+                        <h5>About Us</h5>
+                        <small>Request Demo</small><br>
+                        <small>FAQ</small>
+                    </div>
+                    <div class="links-title">
+                        <h5>Support</h5>
+                        <small>Features</small><br>
+                        <small>Contact us</small>
+                    </div>
+                    <div class="links-title">
+                        <h5>Explore</h5>
+                        <small>New Learnings</small><br>
+                        <small>Corporate Solutions</small>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-info">
+                    <div class="copyright-text">
+                        <small>© 2023 All rights reserved </small>
+                        <small>Design by <a href="https://www.instagram.com/mai_parwant?igshid=YzVkODRmOTdmMw=="
+                                target="_blank">Parwant & Co.</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -----------------------------social-icon------------------------------------- -->
+
+    <!-- <div class="icons">
+        <a href="https://www.instagram.com/yourprofile" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank">
+            <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.facebook.com/yourprofile" target="_blank">
+            <img src="images/facebook.png" alt="Facebook">
+        </a>
+    </div> -->
+
+
+
+
+
+
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+
+        sideNav.style.right = "-250px"
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = '0';
+            }
+            else {
+                sideNav.style.right = '-250px'
+            }
+        }
+
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 2000,
+            speedAsDuration: true
+        });
+
+        
+    </script>
+</body>
+
+</html>

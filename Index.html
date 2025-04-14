@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp-Page</title>
+  <link rel="stylesheet" href="SignUp.css">
+  <link rel="stylesheet" href="tran.css">
+  <link rel="icon" href="images/Screenshot (2).png">
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Firebase SDKs -->
+  <script type="module">
+    // Firebase and custom code as a module
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+    const firebaseConfig = {
+  apiKey: "AIzaSyCY_mvuc9hudIZm7lsCr4S-Eo9eyb2grsM",
+  authDomain: "yogo-22673.firebaseapp.com",
+  projectId: "yogo-22673",
+  storageBucket: "yogo-22673.appspot.com",
+  messagingSenderId: "934952882321",
+  appId: "1:934952882321:web:8b881536116e8c05bbef30",
+  measurementId: "G-QTQHYT5M6Z"
+};
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Signup form logic
+    window.addEventListener('DOMContentLoaded', () => {
+      const signupForm = document.getElementById('signupForm');
+      signupForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert("Account created successfully!");
+            window.location.href = "LogIn.html";
+          })
+          .catch((error) => {
+            alert("Error: " + error.message);
+          });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1 class="logo">AntWrap<i class="bx bx-bug-alt"></i></h1>
+  <div class="container">
+    <form id="signupForm">
+      <h1>Signin</h1>
+      <div class="input-box">
+        <input type="text" id="fullname" placeholder="Fullname" required>
+        <i class="bx bx-user"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="email" id="email" placeholder="ABC@xyz.com" required>
+        <i class="bx bx-envelope"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="tel" id="phone" placeholder="Ph.number" required>
+        <i class="bx bx-phone"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password" required>
+        <i class="bx bx-lock"></i>
+      </div>
+
+      <button class="btn" type="submit">Signup</button>
+
+      <div class="login">
+        <p>Already have an account? <a href="LogIn.html">Login</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

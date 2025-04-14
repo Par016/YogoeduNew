@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogIn Page</title>
+  <link rel="stylesheet" href="LogIn.css">
+  <link rel="stylesheet" href="tran.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="images/Screenshot (2).png" sizes="20px">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+</head>
+
+<body>
+  <h1 class="logo">AntWrap <i class="bx bx-bug-alt"></i></h1>
+  <div class="container">
+    <form autocomplete="on">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <i class="bx bxs-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+      <div class="rem-for">
+        <label><input type="checkbox"> Remember Me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" class="btn" id="LoginButton">Login</button>
+      <div class="register">
+        <p>Don't have an account? <a href="SignUp.html">Register</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCY_mvuc9hudIZm7lsCr4S-Eo9eyb2grsM",
+      authDomain: "yogo-22673.firebaseapp.com",
+      projectId: "yogo-22673",
+      storageBucket: "yogo-22673.appspot.com",
+      messagingSenderId: "934952882321",
+      appId: "1:934952882321:web:8b881536116e8c05bbef30",
+      measurementId: "G-QTQHYT5M6Z"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const loginBtn = document.getElementById('LoginButton');
+
+    loginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          alert("Login successful!");
+          window.location.href = "Home.html";
+        })
+        .catch((error) => {
+          alert("Login failed: " + error.message);
+        });
+    });
+  </script>
+</body>
+
+</html>
