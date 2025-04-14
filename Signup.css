@@ -11,7 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     /* background-color: aqua; */
-    background-image: url(backiee-269161.jpg);
+    background-image: url("backiee-269161.jpg");
     background-size: cover;
     background-position: center;
 }
